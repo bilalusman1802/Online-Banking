@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url("images/loginpic.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+
+        .navbar-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 10px 30px;
+            color: rgb(0, 0, 0);
+        }
+
+        .brand-left {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .brand-left img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .menu-right {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-right li {
+            position: relative;
+        }
+
+        .menu-right a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            padding: 8px 12px;
+            display: inline-block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            top: 35px;
+            left: 0;
+            padding: 10px 0;
+            border-radius: 5px;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-menu li {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .menu-right li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .wrapper {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            background-color:transparent;         
+            border-radius: 8px;
+        }
+
+        .wrapper h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #003366;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            padding-left: 40px;
+            border: 1px solid #ccc;
+            background-color: t;
+            border-radius: 5px;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .remember-forget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .remember-forget a {
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #003366;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #00509e;
+        }
+
+        .SignUp-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .SignUp-link a {
+            color: #003366;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar-bottom">
+            <a href="#home" class="brand-left">
+                <img src="images/banklogo.jpg" alt="SafePay Logo">SafePay
+            </a>
+            <ul class="menu-right">
+                <li>
+                    <a href="#services">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Savings Account</a></li>
+                        <li><a href="#">Personal Loans</a></li>
+                        <li><a href="#">Fund Transfers</a></li>
+                        <li><a href="#">Debit Cards</a></li>
+                    </ul>
+                </li>
+                <li><a href="Budgeting.html">Budgeting</a></li>
+                <li><a href="landingpage.html">Banking</a></li>
+                <li><a href="Help.html">Help</a></li>
+                <li><a href="SignUp.html">SignUp</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" maxlength="12" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" maxlength="15" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forget">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="SignUp-link">
+                <p><b>Don't have an account? <a href="SignUp.html">SignUp</b></a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
