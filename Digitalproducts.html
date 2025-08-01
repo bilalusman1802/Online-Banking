@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SP Digital Products | SafePay</title>
+  <style>
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar-bottom {
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .brand-left {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0f4c75;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-left img {
+      height: 45px;
+      width: 45px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .menu-right {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .menu-right li a {
+      color: #0f4c75;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-right li a:hover {
+      background-color: #e0f0ff;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      background-color: #fff;
+      list-style: none;
+      padding: 10px 0;
+      display: none;
+      top: 40px;
+      min-width: 200px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    .left-section {
+      width: 60%;
+      min-width: 300px;
+    }
+
+    .main-img img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .main-text h1 {
+      color: #0f4c75;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .main-text h3 {
+      color: #0066cc;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .main-text p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .btn-left {
+      background-color: #0f4c75;
+      color: white;
+    }
+
+    .btn-left:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .right-section {
+      width: 32%;
+      max-height: 480px;
+      overflow-y: auto;
+      padding: 25px;
+      background: #f4faff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    .right-section h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #0f4c75;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .feature img {
+      width: 28px;
+      height: 28px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .feature p {
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .right-section {
+        margin-top: 30px;
+      }
+
+      .navbar-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-right {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      }
+    }
+    </style>
+    </head>
+<body id="Home">
+  <div class="navbar-bottom">
+    <a href="landingpage.html" class="brand-left">
+      <img src="images/banklogo.jpg" alt="SafePay Logo">SafePay
+    </a>
+    <ul class="menu-right">
+      <li class="dropdown">
+        <a href="landingpage.html" onclick="event.preventDefault();">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="savingaccount.html">Savings Account</a></li>
+          <li><a href="currentaccount.html">Current Account</a></li>
+          <li><a href="transferfund.html">Fund Transfers</a></li>
+          <li><a href="#">Debit Cards</a></li>
+        </ul>
+      </li>
+      <li><a href="banking.html">Business</a></li>
+      <li><a href="Digitalproducts.html">Digital Products</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="left-section">
+      <div class="main-img">
+        <img src="images/raast2.png" alt="Raast">
+      </div>
+      <div class="main-text">
+        <h1>Raast Hai Asaan!</h1>
+        <p>
+          Raast is Pakistan first instant payment system,which enables individuals, businesses, and government entities to transfer funds using their mobile number as their Raast ID. All you need is to do is register your mobile number with SP Bank account number and start sending and receiving money on your Raast ID.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h2>Features</h2>
+      <div class="feature">
+        <img src="images/instant.png" alt="Instant Payments icon">
+        <p>Instant Payments</p>
+      </div>  
+      <div class="feature">
+        <img src="images/free of cost.png" alt="Free of Cost icon">
+        <p>Free of Cost</p>
+      </div>  
+      <div class="feature">
+        <img src="images/simplebutton.png" alt="Simple click icon">
+        <p>Simple Use</p>
+      </div> 
+      <div class="feature">
+        <img src="images/full timesupport.png" alt="24/7 Support icon">
+        <p>24/7 Support</p>
+      </div> 
+      <div class="feature">
+        <img src="images/Reliable.png" alt="Reliable icon">
+        <p>Reliable and Secure</p>
+      </div> 
+      <div class="feature">
+        <img src="images/simple to use.png" alt="Simple to icon">
+        <p>Cheque Book</p>
+      </div> 
+    </div>
+  </div>
+</body>
+</html>

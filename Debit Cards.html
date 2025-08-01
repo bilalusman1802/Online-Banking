@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debit Cards | SafePay</title>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar-bottom {
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar-bottom {
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .brand-left {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0f4c75;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-left img {
+      height: 45px;
+      width: 45px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .menu-right {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .menu-right li a {
+      color: #0f4c75;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-right li a:hover {
+      background-color: #e0f0ff;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      background-color: #fff;
+      list-style: none;
+      padding: 10px 0;
+      display: none;
+      top: 40px;
+      min-width: 200px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    .left-section {
+      width: 60%;
+      min-width: 300px;
+    }
+
+    .main-img img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .main-text h1 {
+      color: #0f4c75;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .main-text h3 {
+      color: #0066cc;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .main-text p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .btn-left {
+      background-color: #0f4c75;
+      color: white;
+    }
+
+    .btn-left:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .right-section {
+      width: 32%;
+      max-height: 480px;
+      overflow-y: auto;
+      padding: 25px;
+      background: #f4faff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    .right-section h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #0f4c75;
+    }
+
+    .right-section h5 {
+      font-size: 16px;
+      color: #0f4c75;
+    }
+
+    .right-section p {
+      font-size: 15px;
+      color: #333;
+  
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .right-section {
+        margin-top: 30px;
+      }
+
+      .navbar-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-right {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      }
+    }
+
+
+    .cards-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cards-section h2 {
+      font-size: 28px;
+      color: #0073c6;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card-box {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      width: calc(25% - 20px);
+      min-width: 240px;
+      transition: transform 0.3s ease;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-box img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .card-content h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #444;
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      .card-container {
+        justify-content: center;
+      }
+
+      .card-box {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <body id="Home">
+    <div class="navbar-bottom">
+        <a href="landingpage.html" class="brand-left">
+            <img src="images/banklogo.jpg" alt="SafePay Logo"> SafePay</a>
+        <ul class="menu-right">
+            <li class="dropdown">
+                <a href="landingpage.html" onclick="event.preventDefault();">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="savingaccount.html">Savings Account</a></li>
+                    <li><a href="currentaccount.html">Current Account</a></li>
+                    <li><a href="transferfund.html">Fund Transfers</a></li>
+                    <li><a href="#">Debit Cards</a></li>
+                </ul>
+            </li>
+            <li><a href="banking.html">Business</a></li>
+            <li><a href="Digitalproducts.html">Digital Products</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+  <div class="cards-section">
+    <h2>Debit cards</h2>
+    <div class="card-container">
+
+      <div class="card-box">
+        <img src="images/PayPak.jpg" alt="Pay PAK Debit Card" />
+        <div class="card-content">
+          <h3>Pay PAK Debit Card</h3>
+          <p>Pakistan’s First & only Domestic Payment Scheme! #truepakistani</p>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <img src="images/classic.jpg" alt="Classic Debit Card" />
+        <div class="card-content">
+          <h3>Classic Debit Card</h3>
+          <p>Go cashless with our Debit Card to live life hassle free.</p>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <img src="images/Titanium.jpg" alt="Titanium Debit Card" />
+        <div class="card-content">
+          <h3>Titanium Debit Card</h3>
+          <p>Make the most of your spending with the Standard Chartered debit card.</p>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <img src="images/Priority.jpg" alt="Priority Platinum Debit Card" />
+        <div class="card-content">
+          <h3>Priority Platinum Debit Card</h3>
+          <p>The card to compliment your lifestyle. Enjoy exclusive privileges with our exclusive card.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

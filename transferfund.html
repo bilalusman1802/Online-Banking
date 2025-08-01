@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SP Transfer Funds | SafePay</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar-bottom {
+      padding: 12px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+    }
+
+    .brand-left {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0f4c75;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-left img {
+      height: 45px;
+      width: 45px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .menu-right {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .menu-right li a {
+      color: #0f4c75;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: 500;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .menu-right li a:hover {
+      background-color: #e0f0ff;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      background-color: #fff;
+      list-style: none;
+      padding: 10px 0;
+      display: none;
+      top: 40px;
+      min-width: 200px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      padding: 10px 20px;
+    }
+
+    .dropdown-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .left-section {
+      width: 60%;
+      min-width: 300px;
+    }
+
+    .main-text h1 {
+      color: #0f4c75;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .main-text h3 {
+      color: #0066cc;
+      font-size: 22px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .main-text p {
+      font-size: 17px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .right-section {
+      width: 35%;
+      min-width: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-img img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+      }
+
+      .right-section {
+        margin-top: 30px;
+        justify-content: flex-start;
+      }
+
+      .navbar-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-right {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body id="Home">
+  <div class="navbar-bottom">
+    <a href="landingpage.html" class="brand-left">
+      <img src="images/banklogo.jpg" alt="SafePay Logo">SafePay
+    </a>
+    <ul class="menu-right">
+      <li class="dropdown">
+        <a href="#" onclick="event.preventDefault();">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="savingaccount.html">Savings Account</a></li>
+          <li><a href="currentaccount.html">Current Account</a></li>
+          <li><a href="transferfund.html">Fund Transfers</a></li>
+          <li><a href="#">Debit Cards</a></li>
+        </ul>
+      </li>
+      <li><a href="banking.html">Business</a></li>
+      <li><a href="Digitalproducts.html">Digital Products</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="left-section">
+      <div class="main-text">
+        <h1>Transfer to Other Bank Accounts</h1>
+        <h3>Requirements</h3>
+        <p>A valid and complete SPBL account number or International Bank Account Number (IBAN) is required.</p>
+
+        <h3>Overview</h3>
+        <p>
+          Send money directly to any account held at another bank in Pakistan.<br><br>
+          <strong>Inter Bank Fund Transfer (IBFT):</strong> Instant credit to any active bank account in Pakistan.<br>
+          <strong>PRISM / RTGS:</strong> Same-day credit to any active bank account in Pakistan.<br><br>
+          Fast, prompt, and hassle-free funds transfer.<br>
+          Free-of-cost services.<br>
+          Complete reliability of transfer.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="main-img">
+        <img src="images/transferto other.png" alt="Transfer to Other Banks">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
